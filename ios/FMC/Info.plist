@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Flash Memory Summit</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.10.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>App uses Bluetooth to find, connect and communicate with nearby devices. Please grant access.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App uses Bluetooth to find, connect and communicate with nearby devices. Please grant access.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow Background Location updates for Event triggering while the App is in background</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow always usage for permanent positioning support</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow Location Updates for basic Proximi.io SDK operation</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Allow motion detection for improved positioning</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AntDesign.ttf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>FontAwesome5_Brands.ttf</string>
+		<string>FontAwesome5_Regular.ttf</string>
+		<string>FontAwesome5_Solid.ttf</string>
+		<string>Fontisto.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
+		<string>FuturaPT-Bold.ttf</string>
+		<string>FuturaPT-BoldObl.ttf</string>
+		<string>FuturaPT-Book.ttf</string>
+		<string>FuturaPT-BookObl.ttf</string>
+		<string>FuturaPT-Demi.ttf</string>
+		<string>FuturaPT-DemiObl.ttf</string>
+		<string>FuturaPT-ExtraBold.ttf</string>
+		<string>FuturaPT-ExtraBoldObl.ttf</string>
+		<string>FuturaPT-Heavy.ttf</string>
+		<string>FuturaPT-HeavyObl.ttf</string>
+		<string>FuturaPT-Light.ttf</string>
+		<string>FuturaPT-LightObl.ttf</string>
+		<string>FuturaPT-Medium.ttf</string>
+		<string>FuturaPT-MediumObl.ttf</string>
+		<string>FuturaPTCond-Bold.ttf</string>
+		<string>FuturaPTCond-BoldObl.ttf</string>
+		<string>FuturaPTCond-Book.ttf</string>
+		<string>FuturaPTCond-BookObl.ttf</string>
+		<string>FuturaPTCond-ExtraBold.ttf</string>
+		<string>FuturaPTCond-ExtraBoldObl.ttf</string>
+		<string>FuturaPTCond-Medium.ttf</string>
+		<string>FuturaPTCond-MediumObl.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

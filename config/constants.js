@@ -1,0 +1,4 @@
+export const BASE_URL = "https://realintelligence.com/customers/expos/00Do0000000aAt2/";
+export const PROXIMIIO_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6ImYwZGE4YzMwLTg5ZjYtNGUxMS05MDBiLWI2NjQ3Y2IzMzJjYyIsInR5cGUiOiJhcHBsaWNhdGlvbiIsImFwcGxpY2F0aW9uX2lkIjoiMjNlMDRiZDAtMjA0Zi00MTlkLWFkMjAtM2Q2MTNmNDdlZDM1In0.RjFBjgvP1LWxIaOyVPc9RU-IzNrqOOe6rkPH6ojkiEA';
+export const MAPBOX_TOKEN = "pk.eyJ1IjoiY29vbGRldjkzY29kZSIsImEiOiJjanlqZmxxMDYwMjZ1M2xsaGhnMWRxdHQzIn0.IMnd8ePjN1KcAI0xZouZXQ";
+export const ONESIGNAL_APP_ID = "98cf88ba-1990-4880-8299-05b3a357c414";
