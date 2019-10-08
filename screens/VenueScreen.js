@@ -41,6 +41,7 @@ class VenueScreen extends Component {
     this.onPositionUpdate = this.onPositionUpdate.bind(this);
     this.onGeofenceEnter = this.onGeofenceEnter.bind(this);
     this.onGeofenceExit = this.onGeofenceExit.bind(this);
+    this.onFloorChange = this.onFloorChange.bind(this);
   }
 
   componentDidMount() {
@@ -69,7 +70,7 @@ class VenueScreen extends Component {
   }
 
   componentWillUnmount() {
-    // destoryProximiio();
+    destoryProximiio();
   }
 
   async initProximiio() {
@@ -108,6 +109,25 @@ class VenueScreen extends Component {
         proximiioReady: true
       });
     }
+
+    this.subscriptions = {
+      positionUpdates: Proximiio.subscribe(
+        Proximiio.Events.PositionUpdated,
+        this.onPositionUpdate()
+      ),
+      floorChange: Proximiio.subscribe(
+        Proximiio.Events.FloorChanged,
+        this.onFloorChange()
+      ),
+      enteredGeofence: Proximiio.subscribe(
+        Proximiio.Events.EnteredGeofence,
+        this.onGeofenceEnter()
+      ),
+      exitedGeofence: Proximiio.subscribe(
+        Proximiio.Events.ExitedGeofence,
+        this.onGeofenceExit()
+      )
+    };
   }
 
   async destoryProximiio() {
@@ -133,6 +153,10 @@ class VenueScreen extends Component {
       "location updated: ",
       location
     );
+  }
+
+  onFloorChange(floor) {
+    console.log("on floor change", floor);
   }
 
   onGeofenceEnter(geofence) {
