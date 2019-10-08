@@ -57,6 +57,8 @@
 		38F53F20F5FA400483DF813F /* FuturaPT-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1949E4795FF54AC39223ED6D /* FuturaPT-Light.ttf */; };
 		39A07A43177843238CF8547D /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E778C3F8431E4024878F3DD0 /* AntDesign.ttf */; };
 		3F91A22DA51C4F6399F698F2 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34E1EC2D5A7F45ECB1EF56B6 /* MaterialCommunityIcons.ttf */; };
+		4269E67A6BD671586FA20B21 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D17FD9DA6D37562BF03C49 /* libPods-OneSignalNotificationServiceExtension.a */; };
+		45F7C98D13072D2929C1948D /* libPods-FMC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED57583CC8F1C524BD042152 /* libPods-FMC.a */; };
 		4C6C45C9386B490AA7FFA212 /* libRNCookieManagerIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48C60723B3A74F0688C1D930 /* libRNCookieManagerIOS.a */; };
 		50C12D430E4942DCB87CF6F3 /* FuturaPTCond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4789A8D26B642F3BB353637 /* FuturaPTCond-Medium.ttf */; };
 		5D1A1979DA2C4807A7FD8928 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 334BF3A85DDB46D9B0179212 /* Foundation.ttf */; };
@@ -71,7 +73,6 @@
 		8D221EA8798A49DB9207A96A /* FuturaPTCond-BookObl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 846F215D36F74960A7B767AC /* FuturaPTCond-BookObl.ttf */; };
 		8DC6ABFB6B8B40C69063C6C6 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81A220A4387541F1A2A441F4 /* Zocial.ttf */; };
 		8E25612FF57E41CBBC3C4809 /* FuturaPT-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B847A5E546344E1CA62A5856 /* FuturaPT-Heavy.ttf */; };
-		9352CB5217600F2826B5A7E2 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 095B840B89888A609222A0F8 /* libPods-OneSignalNotificationServiceExtension.a */; };
 		95271C2F0B7947479015DB99 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BED08E9B3FA49C882E649DB /* libRNGestureHandler-tvOS.a */; };
 		9B3A0CE7338641B9A9508BA7 /* FuturaPT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCBB1AC305944F7899C753E8 /* FuturaPT-Bold.ttf */; };
 		A53C714EAC634DA5A2403E41 /* FuturaPT-Demi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DB14C31570247E8BEF44B85 /* FuturaPT-Demi.ttf */; };
@@ -80,7 +81,6 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B183099158F54D039FFB6BF3 /* FuturaPT-BookObl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35B66F9AA9624F7997DBA62C /* FuturaPT-BookObl.ttf */; };
 		B5F388130EE9456FBCC0A76B /* FuturaPTCond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A056B849CF746F9800D9B95 /* FuturaPTCond-Bold.ttf */; };
-		C8F4B79B092D4EF1D1946443 /* libPods-FMC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E35FE01E0D115C0AF75F7E9 /* libPods-FMC.a */; };
 		CAAF2B36B6294EFC8BFCB555 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEE2895601C64EFCBF3F29DE /* FontAwesome5_Brands.ttf */; };
 		CAC8D221924C42ECA5D30771 /* FuturaPT-ExtraBoldObl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27AF06D254324F5EB19DFAE9 /* FuturaPT-ExtraBoldObl.ttf */; };
 		DBFAF489D4684D1CAEB211F6 /* FuturaPT-HeavyObl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05EC55D8C80A41809424CCC7 /* FuturaPT-HeavyObl.ttf */; };
@@ -453,8 +453,6 @@
 		04FB482F22D232550036BFD7 /* IndoorAtlas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IndoorAtlas.framework; sourceTree = "<group>"; };
 		05EC55D8C80A41809424CCC7 /* FuturaPT-HeavyObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-HeavyObl.ttf"; path = "../assets/fonts/FuturaPT-HeavyObl.ttf"; sourceTree = "<group>"; };
 		068C5A02901949A7B0023D84 /* FuturaPTCond-MediumObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-MediumObl.ttf"; path = "../assets/fonts/FuturaPTCond-MediumObl.ttf"; sourceTree = "<group>"; };
-		095B840B89888A609222A0F8 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		132AD59C426DE4D415AD85CA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* FMC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +468,7 @@
 		1A4BF4C5A6E04132A8A77AD4 /* libRNGestureHandler.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGestureHandler.a; sourceTree = "<group>"; };
 		1AA937A7BC914C0FB3DD27E0 /* FuturaPT-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-Book.ttf"; path = "../assets/fonts/FuturaPT-Book.ttf"; sourceTree = "<group>"; };
 		20480D3F709540ECA9DAE527 /* FuturaPT-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-Medium.ttf"; path = "../assets/fonts/FuturaPT-Medium.ttf"; sourceTree = "<group>"; };
+		20635D3FBE6741FDA1DDE9D2 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		27AF06D254324F5EB19DFAE9 /* FuturaPT-ExtraBoldObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-ExtraBoldObl.ttf"; path = "../assets/fonts/FuturaPT-ExtraBoldObl.ttf"; sourceTree = "<group>"; };
 		2A056B849CF746F9800D9B95 /* FuturaPTCond-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-Bold.ttf"; path = "../assets/fonts/FuturaPTCond-Bold.ttf"; sourceTree = "<group>"; };
 		2BED08E9B3FA49C882E649DB /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
@@ -483,20 +482,20 @@
 		34E1EC2D5A7F45ECB1EF56B6 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		35B66F9AA9624F7997DBA62C /* FuturaPT-BookObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-BookObl.ttf"; path = "../assets/fonts/FuturaPT-BookObl.ttf"; sourceTree = "<group>"; };
 		3DB14C31570247E8BEF44B85 /* FuturaPT-Demi.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-Demi.ttf"; path = "../assets/fonts/FuturaPT-Demi.ttf"; sourceTree = "<group>"; };
+		464DDFF09AE802B190F6FA0B /* Pods-FMC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMC.debug.xcconfig"; path = "Target Support Files/Pods-FMC/Pods-FMC.debug.xcconfig"; sourceTree = "<group>"; };
 		48C60723B3A74F0688C1D930 /* libRNCookieManagerIOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCookieManagerIOS.a; sourceTree = "<group>"; };
-		5E178A387A89AB7A228A0FB0 /* Pods-FMC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMC.release.xcconfig"; path = "Target Support Files/Pods-FMC/Pods-FMC.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		65E2236867C74879B79F6B8A /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		6DAA67A58A254324B439C179 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
-		6E35FE01E0D115C0AF75F7E9 /* libPods-FMC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7CDE650DF5584A74BCA7E9C8 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		81A220A4387541F1A2A441F4 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		846F215D36F74960A7B767AC /* FuturaPTCond-BookObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-BookObl.ttf"; path = "../assets/fonts/FuturaPTCond-BookObl.ttf"; sourceTree = "<group>"; };
 		8628E4E93291432DA0716E2D /* FuturaPTCond-BoldObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-BoldObl.ttf"; path = "../assets/fonts/FuturaPTCond-BoldObl.ttf"; sourceTree = "<group>"; };
-		8CE61DD0876DA97A868F56BA /* Pods-FMC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMC.debug.xcconfig"; path = "Target Support Files/Pods-FMC/Pods-FMC.debug.xcconfig"; sourceTree = "<group>"; };
 		8D174B71946247D79CB3AFCA /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		93D17FD9DA6D37562BF03C49 /* libPods-OneSignalNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OneSignalNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		973CD5ED1B636841C182D3E6 /* Pods-FMC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FMC.release.xcconfig"; path = "Target Support Files/Pods-FMC/Pods-FMC.release.xcconfig"; sourceTree = "<group>"; };
 		A80603D7438341D9AEE3BCDD /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		A82C3628F44C42C491C9A012 /* FuturaPT-MediumObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-MediumObl.ttf"; path = "../assets/fonts/FuturaPT-MediumObl.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -508,15 +507,16 @@
 		BFC494F7E2A64334A037C2DB /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		C0009F4A8ECD46C3A1E4B815 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		C2A22A9A9ADE418BBCF1E3C2 /* FuturaPT-LightObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-LightObl.ttf"; path = "../assets/fonts/FuturaPT-LightObl.ttf"; sourceTree = "<group>"; };
+		C58E40A6F5802950BAFB18E8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		CCBB1AC305944F7899C753E8 /* FuturaPT-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-Bold.ttf"; path = "../assets/fonts/FuturaPT-Bold.ttf"; sourceTree = "<group>"; };
 		CEE2895601C64EFCBF3F29DE /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		D335E0EEBEBC4816B4F1AC78 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		E0F4DA2395D606131DDD5590 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		E3CA5CEEA3A34831AAB6CA55 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		E778C3F8431E4024878F3DD0 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		E8B60BC6C8D84EF5A3DAF65C /* FuturaPT-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-ExtraBold.ttf"; path = "../assets/fonts/FuturaPT-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		ED57583CC8F1C524BD042152 /* libPods-FMC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FMC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40D2FB4E4D74781AE94A9FA /* FuturaPTCond-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-ExtraBold.ttf"; path = "../assets/fonts/FuturaPTCond-ExtraBold.ttf"; sourceTree = "<group>"; };
 		F4789A8D26B642F3BB353637 /* FuturaPTCond-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPTCond-Medium.ttf"; path = "../assets/fonts/FuturaPTCond-Medium.ttf"; sourceTree = "<group>"; };
 		FEC5CC0CB29F4860A722EF3F /* FuturaPT-DemiObl.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "FuturaPT-DemiObl.ttf"; path = "../assets/fonts/FuturaPT-DemiObl.ttf"; sourceTree = "<group>"; };
@@ -537,7 +537,7 @@
 			files = (
 				044F150022DE09C900BE6B36 /* SystemConfiguration.framework in Frameworks */,
 				044F14FE22DE09C200BE6B36 /* UIKit.framework in Frameworks */,
-				9352CB5217600F2826B5A7E2 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
+				4269E67A6BD671586FA20B21 /* libPods-OneSignalNotificationServiceExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +563,7 @@
 				04FB483022D232560036BFD7 /* IndoorAtlas.framework in Frameworks */,
 				4C6C45C9386B490AA7FFA212 /* libRNCookieManagerIOS.a in Frameworks */,
 				E12A922C91FA4ACCAFBDB4FD /* libRNGestureHandler.a in Frameworks */,
-				C8F4B79B092D4EF1D1946443 /* libPods-FMC.a in Frameworks */,
+				45F7C98D13072D2929C1948D /* libPods-FMC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,10 +640,10 @@
 		00C30DFC214C1602AD360530 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CE61DD0876DA97A868F56BA /* Pods-FMC.debug.xcconfig */,
-				5E178A387A89AB7A228A0FB0 /* Pods-FMC.release.xcconfig */,
-				E0F4DA2395D606131DDD5590 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				132AD59C426DE4D415AD85CA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				464DDFF09AE802B190F6FA0B /* Pods-FMC.debug.xcconfig */,
+				973CD5ED1B636841C182D3E6 /* Pods-FMC.release.xcconfig */,
+				C58E40A6F5802950BAFB18E8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				20635D3FBE6741FDA1DDE9D2 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -777,8 +777,8 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				6E35FE01E0D115C0AF75F7E9 /* libPods-FMC.a */,
-				095B840B89888A609222A0F8 /* libPods-OneSignalNotificationServiceExtension.a */,
+				ED57583CC8F1C524BD042152 /* libPods-FMC.a */,
+				93D17FD9DA6D37562BF03C49 /* libPods-OneSignalNotificationServiceExtension.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -943,7 +943,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044F14F922DE097A00BE6B36 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				0F4754BE9EA1AFFD1A7CCA95 /* [CP] Check Pods Manifest.lock */,
+				0FFEFCA2016F67FFCF62B8E5 /* [CP] Check Pods Manifest.lock */,
 				044F14EC22DE097A00BE6B36 /* Sources */,
 				044F14ED22DE097A00BE6B36 /* Frameworks */,
 				044F14EE22DE097A00BE6B36 /* Resources */,
@@ -961,16 +961,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FMC" */;
 			buildPhases = (
-				3E735B084140FF75836E0030 /* [CP] Check Pods Manifest.lock */,
+				800127AA9311AB1BFD2B12E7 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				04FB482E22D232400036BFD7 /* Embed Frameworks */,
 				04B61BCC22E6BE7F009986B1 /* ShellScript */,
-				A5E28D3EB54E9BE8ACAE3B92 /* [CP] Copy Pods Resources */,
 				044F14FC22DE097A00BE6B36 /* Embed App Extensions */,
-				A33C2860AA037CBD9D36234C /* [CP] Embed Pods Frameworks */,
+				3F9DEBF475FB43DC9B78BF80 /* [CP] Embed Pods Frameworks */,
+				C4276C1504AD8F5D55FCBD69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1545,7 +1545,7 @@
 			shellPath = /bin/sh;
 			shellScript = "APP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone\n";
 		};
-		0F4754BE9EA1AFFD1A7CCA95 /* [CP] Check Pods Manifest.lock */ = {
+		0FFEFCA2016F67FFCF62B8E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1581,7 +1581,25 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		3E735B084140FF75836E0030 /* [CP] Check Pods Manifest.lock */ = {
+		3F9DEBF475FB43DC9B78BF80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FMC/Pods-FMC-frameworks.sh",
+				"${PODS_ROOT}/../../node_modules/@react-native-mapbox-gl/maps/ios/Mapbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FMC/Pods-FMC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		800127AA9311AB1BFD2B12E7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1603,34 +1621,10 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A33C2860AA037CBD9D36234C /* [CP] Embed Pods Frameworks */ = {
+		C4276C1504AD8F5D55FCBD69 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FMC/Pods-FMC-frameworks.sh",
-				"${PODS_ROOT}/../../node_modules/@react-native-mapbox-gl/maps/ios/Mapbox.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FMC/Pods-FMC-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5E28D3EB54E9BE8ACAE3B92 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FMC/Pods-FMC-resources.sh",
@@ -1652,8 +1646,6 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
@@ -1822,7 +1814,7 @@
 		};
 		044F14FA22DE097A00BE6B36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0F4DA2395D606131DDD5590 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = C58E40A6F5802950BAFB18E8 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1851,7 +1843,7 @@
 		};
 		044F14FB22DE097A00BE6B36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 132AD59C426DE4D415AD85CA /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 20635D3FBE6741FDA1DDE9D2 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1880,7 +1872,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CE61DD0876DA97A868F56BA /* Pods-FMC.debug.xcconfig */;
+			baseConfigurationReference = 464DDFF09AE802B190F6FA0B /* Pods-FMC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FMC/FMC.entitlements;
@@ -1918,7 +1910,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E178A387A89AB7A228A0FB0 /* Pods-FMC.release.xcconfig */;
+			baseConfigurationReference = 973CD5ED1B636841C182D3E6 /* Pods-FMC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FMC/FMC.entitlements;
