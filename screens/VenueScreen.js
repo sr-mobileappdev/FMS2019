@@ -14,7 +14,6 @@ import HomeTopBar from "./../components/HomeTopBar";
 import FloorListView from "./../components/FloorListView";
 
 import MapboxGL from "@react-native-mapbox-gl/maps";
-import Proximiio from "proximiio-react-native-core";
 import ProximiioMap from "proximiio-react-native-map";
 
 import { reaction } from "mobx";
@@ -33,15 +32,8 @@ class VenueScreen extends Component {
       level: 1,
       floorList: [],
       showListView: false,
-      mapLocation: [-121.97545, 37.40459],
-      visitorId: "",
-      proximiioReady: false
+      mapLocation: [-121.97545, 37.40459]
     };
-
-    this.onPositionUpdate = this.onPositionUpdate.bind(this);
-    this.onGeofenceEnter = this.onGeofenceEnter.bind(this);
-    this.onGeofenceExit = this.onGeofenceExit.bind(this);
-    this.onFloorChange = this.onFloorChange.bind(this);
   }
 
   componentDidMount() {
@@ -64,76 +56,8 @@ class VenueScreen extends Component {
       )
     ];
 
-    this.initProximiio();
     this.initMapData();
     this.props.proximiStore.loadFloors();
-  }
-
-  componentWillUnmount() {
-    destoryProximiio();
-  }
-
-  async initProximiio() {
-    if (!Proximiio.isAuthorized()) {
-      await this.setState({
-        visitorId: "authorizing..."
-      });
-
-      // notification customization (android only)
-      if (Platform.OS === "android") {
-        Proximiio.setNotificationMode(Proximiio.NotificationModes.Enabled);
-        Proximiio.setNotificationTitle("Proximi.io Background Service");
-        Proximiio.setNotificationText(
-          "Allows location interactivity while the application is in background"
-        );
-        Proximiio.setNotificationIcon("ic_notification");
-      }
-
-      try {
-        const state = await Proximiio.authorize(PROXIMIIO_TOKEN);
-
-        if (Platform.OS === "ios") {
-          Proximiio.requestPermissions();
-        }
-
-        await this.setState({
-          visitorId: state.visitorId,
-          proximiioReady: true
-        });
-      } catch (error) {
-        await this.setState({ visitorId: "auth failure" });
-      }
-    } else {
-      await this.setState({
-        visitorId: Proximiio.state.visitorId,
-        proximiioReady: true
-      });
-    }
-
-    this.subscriptions = {
-      positionUpdates: Proximiio.subscribe(
-        Proximiio.Events.PositionUpdated,
-        this.onPositionUpdate()
-      ),
-      floorChange: Proximiio.subscribe(
-        Proximiio.Events.FloorChanged,
-        this.onFloorChange()
-      ),
-      enteredGeofence: Proximiio.subscribe(
-        Proximiio.Events.EnteredGeofence,
-        this.onGeofenceEnter()
-      ),
-      exitedGeofence: Proximiio.subscribe(
-        Proximiio.Events.ExitedGeofence,
-        this.onGeofenceExit()
-      )
-    };
-  }
-
-  async destoryProximiio() {
-    Object.keys(this.proximiioSubscriptions).forEach(key =>
-      this.proximiioSubscriptions[key].remove()
-    );
   }
 
   async initMapData() {
@@ -145,26 +69,6 @@ class VenueScreen extends Component {
     });
     ProximiioMap.authorize(PROXIMIIO_TOKEN);
     MapboxGL.setAccessToken(MAPBOX_TOKEN);
-  }
-
-  onPositionUpdate(location) {
-    console.log(
-      // `location updated: ${location.lat} / ${location.lng} (${location.accuacy})`
-      "location updated: ",
-      location
-    );
-  }
-
-  onFloorChange(floor) {
-    console.log("on floor change", floor);
-  }
-
-  onGeofenceEnter(geofence) {
-    console.log(`entered geofence: ${geofence}`);
-  }
-
-  onGeofenceExit(geofence) {
-    console.log(`left geofence: ${geofence}`);
   }
 
   onMenu() {
