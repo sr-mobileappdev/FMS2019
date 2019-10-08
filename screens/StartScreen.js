@@ -162,21 +162,18 @@ class StartScreen extends Component {
       });
 
       // notification customization (android only)
-      if (Platform.OS === "android") {
-        Proximiio.setNotificationMode(Proximiio.NotificationModes.Enabled);
-        Proximiio.setNotificationTitle("Proximi.io Background Service");
-        Proximiio.setNotificationText(
-          "Allows location interactivity while the application is in background"
-        );
-        Proximiio.setNotificationIcon("ic_notification");
-      }
+
+      Proximiio.setNotificationMode(Proximiio.NotificationModes.Enabled);
+      Proximiio.setNotificationTitle("Proximi.io Background Service");
+      Proximiio.setNotificationText(
+        "Allows location interactivity while the application is in background"
+      );
+      Proximiio.setNotificationIcon("ic_notification");
 
       try {
         const state = await Proximiio.authorize(PROXIMIIO_TOKEN);
 
-        if (Platform.OS === "ios") {
-          Proximiio.requestPermissions();
-        }
+        Proximiio.requestPermissions();
 
         await this.setState({
           visitorId: state.visitorId,
@@ -222,6 +219,13 @@ class StartScreen extends Component {
     console.log(
       `location updated: ${location.lat} / ${location.lng} (${location.accuracy})`
     );
+    if (this.props.userStore.currentUser) {
+      this.props.userStore.updateGeoLocation(
+        this.props.userStore.currentUser.id,
+        location.lat,
+        location.lng
+      );
+    }
   }
 
   onFloorChange(floor) {
