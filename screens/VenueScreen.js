@@ -19,6 +19,8 @@ import ProximiioMap from "proximiio-react-native-map";
 import { reaction } from "mobx";
 import { inject, observer } from "mobx-react/native";
 
+import LoadingOverlay from "../components/LoadingOverlay";
+
 @inject("userStore", "proximiStore")
 @observer
 class VenueScreen extends Component {
@@ -32,11 +34,16 @@ class VenueScreen extends Component {
       level: 1,
       floorList: [],
       showListView: false,
-      mapLocation: [-121.97545, 37.40459]
+      mapLocation: [-121.97545, 37.40459],
+      loading: true
     };
+    this.timeout = this.timeout.bind(this);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    await this.setState({
+      loading: true
+    });
     this.disposes = [
       reaction(
         () => this.props.proximiStore.loadFloorsState,
@@ -96,7 +103,15 @@ class VenueScreen extends Component {
     this.setState({ mapLocation: item.geopoint });
   }
 
+  async timeout() {
+    console.log("++++++++++: Map rendering finished");
+    await this.setState({
+      loading: false
+    });
+  }
+
   render() {
+    const { loading } = this.state;
     return (
       <View style={styles.container}>
         <HomeTopBar
@@ -104,7 +119,8 @@ class VenueScreen extends Component {
           onSignOut={() => this.onSignOut()}
         />
 
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, postion: "relative" }}>
+          {loading && <LoadingOverlay />}
           <MapboxGL.MapView
             key="mapContainer"
             ref={c => (this._map = c)}
@@ -112,10 +128,18 @@ class VenueScreen extends Component {
             onDidFinishLoadingMap={() => {
               console.log("didfinishloadingmap");
             }}
+            onDidFailLoadingMap={async () => {
+              await this.setState({
+                loading: false
+              });
+            }}
+            onDidFinishRenderingMapFully={() => {
+              setTimeout(this.timeout, 5000);
+            }}
             rotateEnabled={true}
             pitchEnabled={true}
             zoomEnabled={true}
-            style={{ flex: 1 }}
+            style={{ flex: 1, opacity: loading ? 0 : 1 }}
             styleURL={ProximiioMap.styleURL}
           >
             <MapboxGL.Camera
