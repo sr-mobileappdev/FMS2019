@@ -3,6 +3,8 @@ package com.fmc;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.swmansion.reanimated.ReanimatedPackage;
+import com.mapbox.rctmgl.RCTMGLPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.geektime.rnonesignalandroid.ReactNativeOneSignalPackage;
@@ -21,6 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
+  private RNProximiioReactPackage proximiioPackage = new RNProximiioReactPackage();
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
@@ -32,15 +35,17 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReanimatedPackage(),
+            new RCTMGLPackage(),
             new RNCWebViewPackage(),
             new AsyncStoragePackage(),
             new ReactNativeOneSignalPackage(),
             new RNDeviceInfo(),
-            new RNProximiioReactPackage(),
             new VectorIconsPackage(),
             new RNGestureHandlerPackage(),
             new CookieManagerPackage(),
-            new SplashScreenReactPackage()
+            new SplashScreenReactPackage(),
+            proximiioPackage
       );
     }
 
