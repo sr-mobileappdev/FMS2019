@@ -72,6 +72,7 @@ class VenueScreen extends Component {
       this.setState({ mapDataReady: true });
     });
     ProximiioMap.on("route:change", async route => {
+      console.log("Route:Change ", route);
       await this.setState({ route });
     });
     ProximiioMap.authorize(PROXIMIIO_TOKEN);
@@ -100,7 +101,7 @@ class VenueScreen extends Component {
 
   onSelectedFloor(item) {
     console.log("onSelectedFloor = ", item);
-    this.setState({ mapLocation: item.geopoint });
+    this.setState({ mapLocation: item.geopoint, level: item.level });
   }
 
   async timeout() {
@@ -111,7 +112,8 @@ class VenueScreen extends Component {
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, level } = this.state;
+
     return (
       <View style={styles.container}>
         <HomeTopBar
@@ -152,7 +154,7 @@ class VenueScreen extends Component {
               centerCoordinate={this.state.mapLocation}
             />
 
-            {ProximiioMap.indoorSources(1, true, true)}
+            {ProximiioMap.indoorSources(level, true, true)}
           </MapboxGL.MapView>
 
           <TouchableOpacity
