@@ -219,13 +219,13 @@ class StartScreen extends Component {
     console.log(
       `location updated: ${location.lat} / ${location.lng} (${location.accuracy})`
     );
-    if (this.props.userStore.currentUser) {
-      this.props.userStore.updateGeoLocation(
-        this.props.userStore.currentUser.id,
-        location.lat,
-        location.lng
-      );
-    }
+    // if (this.props.userStore.currentUser) {
+    //   this.props.userStore.updateGeoLocation(
+    //     this.props.userStore.currentUser.id,
+    //     location.lat,
+    //     location.lng
+    //   );
+    // }
   }
 
   onFloorChange(floor) {
