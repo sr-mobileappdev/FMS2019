@@ -73,7 +73,8 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    entryFile: "index.js"
+    entryFile: "index.js",
+    enableHermes: false
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -92,9 +93,21 @@ def enableSeparateBuildPerCPUArchitecture = false
  * Run Proguard to shrink the Java bytecode in release builds.
  */
 def enableProguardInReleaseBuilds = false
+def jscFlavor = 'org.webkit:android-jsc:+'
+
+def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'lib/armeabi/libcpaJNI.so'
+        exclude 'lib/armeabi/libsqlcipher.so'
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -107,7 +120,20 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
+
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+
     splits {
         abi {
             reset()
@@ -120,6 +146,7 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
@@ -138,18 +165,45 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-reanimated')
+    implementation project(':@react-native-mapbox-gl_maps')
     implementation project(':react-native-webview')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-onesignal')
     implementation project(':react-native-device-info')
+
+    implementation("androidx.core:core:1.0.1")
+    implementation("androidx.versionedparcelable:versionedparcelable:1.0.0")
+    implementation("androidx.collection:collection:1.0.0")
+    implementation("androidx.annotation:annotation:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-runtime:2.0.0")
+    implementation("androidx.lifecycle:lifecycle-common:2.0.0")
+    implementation("androidx.arch.core:core-common:2.0.0")
     implementation project(':proximiio-react-native-core')
+    implementation 'io.proximi.proximiiolibrary:proximiiolibrary:2.8.5'
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
     implementation project(':react-native-cookies')
     implementation project(':react-native-splash-screen')
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation "com.google.firebase:firebase-core:17.2.0"
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
+
+    if (enableHermes) {
+        def hermesPath = "../../node_modules/hermesvm/android/";
+        debugImplementation files(hermesPath + "hermes-debug.aar")
+        releaseImplementation files(hermesPath + "hermes-release.aar")
+    } else {
+        implementation jscFlavor
+    }
+}
+
+repositories {
+    maven { url "http://proximi-io.bintray.com/proximiio-android" }
+    maven { url "http://indooratlas-ltd.bintray.com/mvn-public" }
+    maven { url "https://maven.google.com" }
 }
 
 // Run this once to be able to run the application with BUCK
@@ -158,3 +212,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+

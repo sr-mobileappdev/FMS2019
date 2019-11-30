@@ -40,7 +40,7 @@
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>App uses Bluetooth to find, connect and communicate with nearby devices. Please grant access.</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>App uses Bluetooth to find, connect and communicate with nearby devices. Please grant access.</string>
+	<string>Allow bluetooth for improved beacon operation.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Allow Background Location updates for Event triggering while the App is in background</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -93,6 +93,7 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
+		<string>location</string>
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

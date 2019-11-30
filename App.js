@@ -6,10 +6,10 @@
  * @flow
  */
 
-import React, {Component} from 'react';
-import {Provider} from 'mobx-react';
-import stores from './stores';
-import AppNavigator from './navigation/AppNavigator';
+import React, { Component } from "react";
+import { Provider } from "mobx-react";
+import stores from "./stores";
+import AppNavigator from "./navigation/AppNavigator";
 
 export default class App extends Component<Props> {
   render() {
